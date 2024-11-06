@@ -12,6 +12,7 @@ private String password;
 public String getNombre() {
  return nombre;
  }
+//123
 
 public void setNombre(String nombre) {
  this.nombre = nombre;
