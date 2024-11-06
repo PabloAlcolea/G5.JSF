@@ -12,7 +12,7 @@ private String password;
 public String getNombre() {
  return nombre;
  }
-//123
+//123456
 
 public void setNombre(String nombre) {
  this.nombre = nombre;
