@@ -7,21 +7,34 @@
 <h:head><title>Aplicación JavaServer Faces</title></h:head>
 <h:body>
 <h:form>
-<h3>Por favor, introduce tu nombre y tu contraseña </h3>
+<h3>Por favor, introduce tu nombre y tu contraseña (número entre 1 y
+500)</h3>
 <table>
 <tr>
 <td>Nombre:</td>
-<td><h:inputText id="nombre" value="#{login.nombre}"></h:inputText></td>
+<td><h:inputText id="nombre" value="#{login.nombre}">
+<f:validateRegex pattern="^(([a-z]|[A-Z])+[0-9]?)$"/>
+</h:inputText></td>
+<td><h:message for="nombre" style="color:red" /></td>
 </tr>
 <tr>
 <td>Contraseña:</td>
-<td><h:inputSecret id="pass" value="#{login.password}"></h:inputSecret></td>
+<td><h:inputSecret id="pass" redisplay="true" value="#{login.password}">
+<f:validateLongRange minimum="1" maximum="500"/>
+</h:inputSecret></td>
+<td><h:message for="pass" style="color:red" /></td>
 </tr>
-</table>
+<tr>
+<td>Fecha (dd/MM/yyyy):</td>
+<td><h:inputText id="data" value="#{login.fecha}">
+ <f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText></td>
+</tr>
+</table>	
 <p>
 <h:commandButton value="Aceptar" action="#{login.comprobar}"/>
 </p>
 </h:form>
+<h:messages style="color:blue"/> 
 </h:body>
 </f:view>
 </html>
