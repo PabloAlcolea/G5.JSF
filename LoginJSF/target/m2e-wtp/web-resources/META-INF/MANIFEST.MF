@@ -1,4 +1,6 @@
 Manifest-Version: 1.0
-Build-Jdk-Spec: 23
+Build-Jdk-Spec: 21
 Created-By: Maven Integration for Eclipse
+ImplementationTitle: LoginJSF
+ImplementationVersion: 0.0.1-SNAPSHOT
 
