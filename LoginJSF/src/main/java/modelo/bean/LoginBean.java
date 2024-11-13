@@ -36,6 +36,7 @@ public class LoginBean implements Serializable {
 		this.tipo = tipo;
 		System.out.println("El tipo del usuario:" + tipo.getCodigo() + "/" + tipo.getTipoUsu());
 	}
+	//s
 
 	public List<TipoUsuario> getTipos() {
 		return tipos;
